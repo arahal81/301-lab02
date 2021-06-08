@@ -34,6 +34,8 @@ class App extends React.Component {
 
   titleSearch = (e) => {
     this.setState({
+      
+      // eslint-disable-next-line array-callback-return
       data: jsonData.filter(item => {
         if (item.title.toUpperCase().includes(e.target.value.toUpperCase())) {
           return true;

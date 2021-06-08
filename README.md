@@ -1,36 +1,28 @@
 This App view HornedBeasts data in card bootstrap using react 
 
 A question within the context of today’s lab assignment.
-    Name of feature: Feature #1: Display images
+  Feature #1: Display a Modal
 
     Estimate of time needed to complete: 1:00h
 
-    Start time: 3:00
+    Start time: 1:30
 
-    Finish time: 4:00
+    Finish time: 3:00
 
-    Actual time needed to complete: 1:00h
+    Actual time needed to complete: 1:30h
 
-    Feature #2: Allow users to vote for their favorite beast
+    Feature #2: Stretch Goal: Fuzzy search
 
-    Estimate of time needed to complete: 0:30h
+    Estimate of time needed to complete: 1h
 
-    Start time: 4:10
+    Start time: 3:10
 
-    Finish time: 4:55
+    Finish time: 5:00
 
-    Actual time needed to complete: 0:45h
+    Actual time needed to complete: 1:50h
 
-   Feature 3: Bootstrap
-
-    Estimate of time needed to complete: 0:45h
-
-    Start time: 5:05
-
-    Finish time: 6:30
-
-    Actual time needed to complete: 1:25h
+  
     An observation about the lab assignment, or related ‘Ah-hah!’ moment.
     everything okay
     How long you spent working on this assignment.
-    3h
+    3:20h

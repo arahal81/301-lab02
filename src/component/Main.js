@@ -4,16 +4,10 @@ import HornedBeast from './HornedBeast';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns';
 import CardGroup from 'react-bootstrap/CardGroup';
-import jsonData from './data.json';
+import Form from 'react-bootstrap/Form';
 class Main extends React.Component {
 
-    constructor(props){
-        super(props);
-    
-        this.state = {
-          data : jsonData
-        }
-      }
+
      
     render() {
        
@@ -23,13 +17,18 @@ class Main extends React.Component {
 
             <main>
                 <section>
+                <>
+                        <Form.Group controlId="selectForm">
+                        <Form.Control type="Text" onChange={this.props.titleSearch} placeholder="Enter your text that you search for it" />
+                        </Form.Group>
+                    </>
                 <CardGroup >
-                    {this.state.data.map(item => (
+                    {this.props.data.map(item => (
                         <HornedBeast
                             imageUrl={item.image_url}
                             title={item.title}
                             description={item.description}
-
+                            handlModalchange={this.props.handlModalchange}
                         />
                     ))}
 </CardGroup>

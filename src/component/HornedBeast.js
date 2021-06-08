@@ -16,9 +16,9 @@ class HornedBeast extends React.Component {
 
             <div>
                 < Card className="cardimg" style={{color:'whitesmoke', backgroundColor:'black',width: '30.4rem' ,height:'40rem',borderColor:'black ',padding:'0.2rem'}}>
-                    <Card.Img style={{ width: '30rem' ,height:'25rem'}} onClick={this.inecrement} variant="top" src={this.props.imageUrl} />
+                    <Card.Img onClick={this.props.handlModalchange} variant="top" src={this.props.imageUrl } alt={this.props.title} name={this.props.description} style={{ width: '30rem' ,height:'25rem'}} />
                     <Card.Body>
-                        <Card.Title > <p>💓{this.state.count}</p></Card.Title>
+                        <Card.Title onClick={this.inecrement} > <p>💓{this.state.count}</p></Card.Title>
                         <Card.Text>
                             <h2>{this.props.title}</h2>
                             <p> {this.props.description}</p>

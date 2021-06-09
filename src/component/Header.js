@@ -6,7 +6,7 @@ class Header extends React.Component{
         <div>
             <header>
                 <h1>
-                    class-lab-03
+                    class-lab-04
                 </h1>
             </header>
         </div>)

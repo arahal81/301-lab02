@@ -3,7 +3,6 @@ import './App.css';
 import Header from './component/Header';
 import Main from './component/Main';
 import Footer from './component/Footer';
-import jsonData from '../src/component/data.json';
 import SelectedBeast from './component/SelectedBeast'
 class App extends React.Component {
   constructor(props) {
@@ -13,10 +12,9 @@ class App extends React.Component {
       imageUrl: '',
       title: '',
       description: '',
-      data: jsonData
     };
-
   }
+
   handlModal = () => {
     this.setState({ show: !this.state.show });
   }
@@ -31,20 +29,6 @@ class App extends React.Component {
   }
 
 
-
-  titleSearch = (e) => {
-    this.setState({
-      
-      // eslint-disable-next-line array-callback-return
-      data: jsonData.filter(item => {
-        if (item.title.toUpperCase().includes(e.target.value.toUpperCase())) {
-          return true;
-        }
-
-      })
-    });
-
-  }
   render() {
     return (
       <div>
@@ -56,7 +40,7 @@ class App extends React.Component {
           handlModal={this.handlModal}
         />
         <Header />
-        <Main data={this.state.data} handlModalchange={this.handlModalchange} titleSearch={this.titleSearch} />
+        <Main  handlModalchange={this.handlModalchange} titleSearch={this.titleSearch} />
         <Footer />
       </div>
     )

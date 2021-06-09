@@ -5,9 +5,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Form from 'react-bootstrap/Form';
+import jsonData from './data.json';
 class Main extends React.Component {
-
-
+    constructor(props) {
+        super(props);
+        this.state = {      
+          data: jsonData
+        };
+      }
+    filterByHornsNum = (event) => {
+        this.setState({ data: jsonData.filter(item => {
+            if (item.horns == event.target.value) {
+                return (item);
+            }
+            else if (parseInt(event.target.value) === 0) {
+                return (item);
+            }
+        }) });
+     
+    }
      
     render() {
        
@@ -17,13 +33,20 @@ class Main extends React.Component {
 
             <main>
                 <section>
-                <>
+                    <>
                         <Form.Group controlId="selectForm">
-                        <Form.Control type="Text" onChange={this.props.titleSearch} placeholder="Enter your text that you search for it" />
+                            <Form.Label>How many Horns?</Form.Label>
+                            <Form.Control onChange={this.filterByHornsNum} name="filterByHornsNum" as="select">
+                                <option value='0'>All</option>
+                                <option value='1'>One</option>
+                                <option value='2'>Two</option>
+                                <option value='3'>Three</option>
+                                <option value='100'>Wow</option>
+                            </Form.Control>
                         </Form.Group>
                     </>
                 <CardGroup >
-                    {this.props.data.map(item => (
+                    {this.state.data.map(item => (
                         <HornedBeast
                             imageUrl={item.image_url}
                             title={item.title}
